@@ -1,0 +1,116 @@
+<html>
+<!--https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css-->	
+<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
+	<!--https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link-->
+	<!--https://stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer-->
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VLERK</title>
+<style>
+
+	@media screen and (orientation: portrait) {
+	  .pagina {margin:auto;max-width: 90%;}
+	}
+
+	@media screen and (orientation: landscape) {
+	  .pagina {margin:auto;max-width: 30%;}
+	.x{display:none;}
+	}
+
+	img.ri {
+	max-width: 100%;
+	display: block;
+	}
+
+	p {
+	font-size:20;
+  line-height:0;
+	}
+  
+  h1{
+  line-height:0;
+  }
+  
+  button{
+  font-size:14;
+  margin-bottom:10;
+  }
+  
+	a:link {
+	  color: black;
+	}
+
+	a:visited {
+	  color: black;
+	}
+
+	a:hover {
+	  color: red;
+	}
+
+	.outer {
+	  display: table;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	}
+
+	.middle {
+	  display: table-cell;
+	  vertical-align: middle;
+  text-align:center;
+	}
+
+
+</style>
+</head>
+<body style="background-color:#3A8F8470;">
+
+
+	<div class="outer">
+	  <div class="middle">
+	    <div class="inner">
+	      <div class="pagina"><audio id="myAudio" src="https://dl.dropbox.com/s/bq7b0idhqx6is0a/achiel.wav?dl=1" preload="auto"></audio>
+		      <a href="/"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropbox.com/s/w5te6tazhpgzye4/achiel.png?dl=1"></a></div>
+            <a onClick="javascript:changeText(1);togglePlay()" onMouseOver="this.style.cursor='pointer'">
+            <h1>Achiel De Vlerk</h1>
+            <p>&#8594 <tag id="element1">even keuvelen?</tag> &#8592</p>
+          </a>
+          <a href="https://vlerk.bandcamp.com/" target="_blank"><button onMouseOver="this.style.cursor='help'">MYSPACE</button></a>
+          <br class="x"><a href="https://www.instagram.com/achieldevlerk/" target="_blank"><button onMouseOver="this.style.cursor='copy'">INSTA</button></a>
+          <br class="x"><a href="https://open.spotify.com/artist/2mEYlUJDbRnZrm9ryBiMso?si=CRrFK-FqQcy3rd-VHYECXw&dl_branch=1" target="_blank"><button onMouseOver="this.style.cursor='zoom-in'">NETLOG</button></a>
+	    </div>
+	  </div>
+	</div>
+
+<script>
+	var myAudio = document.getElementById("myAudio");
+	var isPlaying = false;
+
+	function togglePlay() {
+	  isPlaying ? myAudio.pause() : myAudio.play();
+	};
+
+	myAudio.onplaying = function() {
+	  isPlaying = true;
+	};
+	myAudio.onpause = function() {
+	  isPlaying = false;
+	};
+</script>
+
+<script>
+	function changeText(idElement) {
+    	var element = document.getElementById('element' + idElement);
+   	 if (idElement === 1 || idElement === 2) {
+        if (element.innerHTML === 'even keuvelen?') element.innerHTML = 'genoeg geroddeld!';
+        else {
+            element.innerHTML = 'even keuvelen?';
+        }
+  	}}
+  </script>
+  
+</body>
+</html>
