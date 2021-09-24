@@ -1,42 +1,107 @@
 <html>
-	<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
-	<!--https://www.w3schools.com/tags/av_met_play.asp-->
-	<!--https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link-->
+<!--https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css-->	
+<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
 	<!--https://stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer-->
+<!-- DROPDOWN LINK https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu -->
 
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VLERK</title>
+
+<script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
+
 <style>
 
-img.ri
-{
-	position: absolute;
-	max-width: 80%;
-	top: 10%;
-	left: 10%;
+	@media screen and (orientation: portrait) {
+	  .pagina {margin:auto;max-width: 90%;}
+	}
 
-}
-img.ri:empty
-{
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-@media screen and (orientation: portrait) {
-  img.ri { max-width: 90%; }
-}
+	@media screen and (orientation: landscape) {
+	  .pagina {margin:auto;max-width: 30%;}
+	.x{display:none;}
+	}
 
-@media screen and (orientation: landscape) {
-  img.ri { max-height: 90%; }
-}
+	img.ri {
+	max-width: 100%;
+	display: block;
+	}
+
+	p {
+	font-size:20;
+  line-height:0;
+color:#01FF01;
+	}
+  
+  h1{
+  line-height:0;
+color:#01FF01;
+  }
+  
+  button{
+  font-size:14;
+  margin-bottom:10;
+  }
+  
+	a:link {
+	  color: black;
+	}
+
+	a:visited {
+	  color: black;
+	}
+
+	a:hover {
+	  color: red;
+	}
+
+	.outer {
+	  display: table;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	}
+
+	.middle {
+	  display: table-cell;
+	  vertical-align: middle;
+  text-align:center;
+	}
+
 </style>
 </head>
 <body style="background-color:black;">
 
-  <a href="raf.html"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropbox.com/s/j0m5r42wslvqval/logo.png?dl=1"></a>
 
+	<div class="outer">
+	  <div class="middle">
+	    <div class="inner">
+	      <div class="pagina">
+		      <a href="/"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropboxusercontent.com/s/j0m5r42wslvqval/logo.png?dl=1"></a></div>
+            
+<form>
+<select name="list" id="list" accesskey="target" style="font-size:20;">
+    <option value='none' selected>CHOOSE YOUR PLAYER</option>
+    <option value="sam" >SAM</option>
+    <option value="achiel">ACHIEL</option>
+    <option value="raf">RAF</option>
+</select>
+<input type=button style="font-size:20;" id="fightlist" value="FIGHT!" onclick="goToNewPage()" />
+</form>
+
+
+
+	    </div>
+	  </div>
+	</div>
+  
 </body>
 </html>
