@@ -1,42 +1,102 @@
 <html>
-	<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
+<!--https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css-->	
+<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
 	<!--https://www.w3schools.com/tags/av_met_play.asp-->
 	<!--https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link-->
 	<!--https://stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer-->
 
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RAFINATOR</title>
 <style>
 
-img.ri
-{
-	position: absolute;
-	max-width: 80%;
-	top: 10%;
-	left: 10%;
+	@media screen and (orientation: portrait) {
+	  .pagina {margin:auto;max-width: 90%;}
+	}
 
-}
-img.ri:empty
-{
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-@media screen and (orientation: portrait) {
-  img.ri { max-width: 90%; }
-}
+	@media screen and (orientation: landscape) {
+	  .pagina {margin:auto;max-width: 30%;}
+	}
 
-@media screen and (orientation: landscape) {
-  img.ri { max-height: 90%; }
-}
+	img.ri {
+		max-width: 100%;
+	    display: block;
+	}
+
+	p {
+	text-align:center;
+	font-size:20;
+	}
+
+	a:link {
+	  color: black;
+	}
+
+	a:visited {
+	  color: black;
+	}
+
+	a:hover {
+	  color: red;
+	}
+
+	.outer {
+	  display: table;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	}
+
+	.middle {
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+
+
 </style>
 </head>
 <body style="background-color:white;">
 
-  <a href="index.html"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropbox.com/s/cmh1ns3y78gfyx2/raf.png?dl=1"></a>
+
+	<div class="outer">
+	  <div class="middle">
+	    <div class="inner">
+	      <div class="pagina"><audio id="myAudio" src="https://dl.dropbox.com/s/ojg8a5kemvf3i9g/spooktrack.wav?dl=1" preload="auto"></audio>
+		<p>&#8594 <a id="element1" onClick="javascript:changeText(1);togglePlay()" onMouseOver="this.style.cursor='pointer'">lekker babbelen</a> &#8592</p>
+		<a href="index.html"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropbox.com/s/cmh1ns3y78gfyx2/raf.png?dl=1"></a></div>
+	    </div>
+	  </div>
+	</div>
+
+<script>
+	var myAudio = document.getElementById("myAudio");
+	var isPlaying = false;
+
+	function togglePlay() {
+	  isPlaying ? myAudio.pause() : myAudio.play();
+	};
+
+	myAudio.onplaying = function() {
+	  isPlaying = true;
+	};
+	myAudio.onpause = function() {
+	  isPlaying = false;
+	};
+</script>
+
+<script>
+	function changeText(idElement) {
+    	var element = document.getElementById('element' + idElement);
+   	 if (idElement === 1 || idElement === 2) {
+        if (element.innerHTML === 'lekker babbelen') element.innerHTML = 'lekker zwijgen';
+        else {
+            element.innerHTML = 'lekker babbelen';
+        }
+  	}
+}</script>
+  
+
 
 </body>
 </html>
