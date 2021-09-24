@@ -97,11 +97,33 @@ color:#01FF01;
 <input type=button style="font-size:20;" id="fightlist" value="FIGHT!" onclick="goToNewPage()" />
 </form>
 
+<form>
+<select name="list" id="list" accesskey="target" style="font-size:20;">
+    <option value='none' selected>CHOOSE YOUR IDEOLOGY</option>
+    <option value="" >$ CAPITALISM $</option>
+    <option value="">☭ COMMUNISM ☭</option>
+    <option value="">☠ ANARCHISM ☠</option>
+</select>
+<input type=button style="font-size:20;" id="fightlist" value="BUY!" onclick="goToNewPage()" />
+</form>
+
 
 
 	    </div>
 	  </div>
 	</div>
+
+
+<script>
+	function changeText(idElement) {
+    	var element = document.getElementById('element' + idElement);
+   	 if (idElement === 1 || idElement === 2) {
+        if (element.innerHTML === 'even keuvelen?') element.innerHTML = 'genoeg geroddeld!';
+        else {
+            element.innerHTML = 'even keuvelen?';
+        }
+  	}}
+  </script>
   
 </body>
 </html>
