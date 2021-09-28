@@ -47,6 +47,7 @@
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;}
+.cont{border-spacing: 0 10;display:inline-block;text-align:left;}
 	}
 
 	@media screen and (orientation: landscape) {
@@ -71,6 +72,7 @@
 	-moz-appearance: none;
 	appearance: none;}
 	.button1:hover{background-color:white;color:black;}
+.cont{border-spacing: 0 60;display:inline-block;text-align:left;}
 	}
 
 	img.ri {
@@ -175,6 +177,8 @@ h1::before {
   
 }
 
+a.tel{color:white;}
+a.tel:hover{color:red;text-decoration:none;}
 </style>
 </head>
 <body style="background-color:black;">
@@ -293,16 +297,16 @@ h1::before {
 <input type=button class="stickybutton button2" onClick="location.href='tel:+32472460316'"
  value='0472 46 03 16'>-->
 
-<table style="border-spacing: 0 60;display:inline-block;text-align:left;">
+<table class="cont">
 <tr><td><a href="https://www.instagram.com/brorlabfanclub"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 <i class="fa fa-instagram" id="insta" aria-hidden="true"> @brorlabfanclub</i></a></td></tr>
 
-<tr><td><p style="font-size:30;"><a href="tel:+32472460316">&#9743; 0472 46 03 16</a></p>/td></tr>
+<tr><td><p style="font-size:30;"><a class="tel" href="tel:+32472460316">&#9743; 0472 46 03 16</a></p></td></tr>
 </table>
 
 </div>
 
-		<form>
+		<!--<form>
 		<select name="list" id="list" accesskey="target" style="font-size:20;">
 		    <option value='none' selected>CHOOSE YOUR PLAYER</option>
 		    <option value="sam" >SAM</option>
@@ -310,7 +314,8 @@ h1::before {
 		    <option value="raf">RAF</option>
 		</select>
 		<input type=button style="font-size:20;" id="fightlist" value="FIGHT!" onclick="goToNewPage()" />
-		</form>
+		</form>-->
+
 <div style="color:red;padding:10;font-size:10;">Site Design ☺ <a href="http://deathstarmacgyver.com" target="_blank" style="font-family:'Courier New'">Deathstar MacGyver</a></div>
 
 
