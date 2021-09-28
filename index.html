@@ -33,6 +33,7 @@
 	.ev-title{letter-spacing:10;margin-bottom:50;}
 td{padding-bottom:15;padding-top:15;}
 	.ev-datum{font-weight:bold;letter-spacing:5;word-spacing:10;border:20px solid red;color:white;background-color:red;}
+.map{width:100%;height:400;}
 	}
 
 	@media screen and (orientation: landscape) {
@@ -42,7 +43,7 @@ td{padding-bottom:15;padding-top:15;}
 	.sub-ev{border:1px solid red;width:60%;margin-left:auto;margin-right:auto;margin-bottom:50;padding-bottom:20;padding-top:30;}
 	.ev-title{letter-spacing:10;margin-bottom:50;}
 	.ev-datum{font-weight:bold;letter-spacing:5;word-spacing:101;border:20px solid red;color:white;background-color:red;}
-
+.map{width:100%;height:500;}
 	}
 
 	img.ri {
@@ -135,7 +136,10 @@ div.sticky {
   cursor: pointer;
 }
 
-.button1 {background-color: black;} /* Green */
+.button1 {background-color: black;}
+.button1:hover{background-color:white;color:black;}
+.button2 {background-color: black; border:5px solid red; font-family:verdana;letter-spacing:10; font-size:20;}
+.button2:hover{background-color:red;}
 
 h1::before { 
   display: block; 
@@ -144,6 +148,17 @@ h1::before {
   height: 100; 
   visibility: hidden; 
   pointer-events: none;
+}
+
+#insta {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-size: 30px; /* change this to change the size*/
+  
 }
 
 </style>
@@ -250,18 +265,27 @@ h1::before {
 
 		</div>
 
-<div class="" style="padding-top:30;">
-<h1 class="ev-title" id="location">LOCATION</h1>
-<div style="">
-
+<div class="" style="padding-top:50;">
+<h1 class="ev-title" id="location" style="margin-bottom:20;">LOCATION</h1>
+<div><div class="sub-ev" style="margin:10;padding:10;display:inline-block;width:auto;"><p>Dingen Die Niet Verkopen</p><p>Oude Beurs 62, Antwerpen</p></div><br><a href="https://goo.gl/maps/5ChA9CzJetEjHicP6" target="_self"><button>Open Google Maps</button></a>
+<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.868482562562!2d4.400134815539742!3d51.22149837958919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f7c5da44f7%3A0x5f59e5351691370c!2sOude%20Beurs%2062%2C%202000%20Antwerpen!5e0!3m2!1snl!2sbe!4v1632863100300!5m2!1snl!2sbe" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 </div>
 
-<div style="padding-top:30;">
-<h1 class="ev-title" id="contact">CONTACT</h1>
-<div style="">
+<div style="padding-top:100;">
+<h1 class="ev-title" id="contact" style="margin-bottom:20;">CONTACT</h1>
+<!--<input type=button class="stickybutton button2" onClick="location.href='https://www.instagram.com/brorlabfanclub/'"
+ value='insta'>
+<input type=button class="stickybutton button2" onClick="location.href='tel:+32472460316'"
+ value='0472 46 03 16'>-->
 
-</div>
+<table style="border-spacing: 0 60;display:inline-block;text-align:left;">
+<tr><td><a href="https://www.instagram.com/brorlabfanclub"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+<i class="fa fa-instagram" id="insta" aria-hidden="true"> @brorlabfanclub</i></a></td></tr>
+
+<tr><td><p style="font-size:30;"><a href="tel:+32472460316">&#9743; 0472 46 03 16</a></p>/td></tr>
+</table>
+
 </div>
 
 		<form>
