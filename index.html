@@ -4,6 +4,12 @@
 	<!--https://stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer-->
 <!-- DROPDOWN LINK https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu -->
 <!-- CENTER TABLE https://www.w3schools.com/howto/howto_css_table_center.asp -->
+<!-- STICKY https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_element -->
+<!-- BUTTON https://www.w3schools.com/tags/tag_button.asp -->
+<!-- BUTTON LINK https://www.plus2net.com/html_tutorial/button-linking.php -->
+<!-- BOOKMARKS https://www.w3schools.com/html/html_links_bookmarks.asp -->
+<!-- STICKY + BOOKMARK LINK PROBLEM https://css-tricks.com/hash-tag-links-padding/ -->
+
 
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BRORLAB.ORG</title>
@@ -24,7 +30,7 @@
 	  .pagina {margin:auto;max-width: 90%;}
 	.sub-ev-inh{margin-left:auto;margin-right: auto;width:90%;color:#01FF01;align:center;font-size:23;}
 	.sub-ev{border:1px solid red;width:90%;margin-left:auto;margin-right:auto;margin-bottom:100;padding-bottom:20;padding-top:20;}
-	.ev-title{margin-bottom:50;}
+	.ev-title{letter-spacing:10;margin-bottom:50;}
 td{padding-bottom:15;padding-top:15;}
 	.ev-datum{font-weight:bold;letter-spacing:5;word-spacing:10;border:20px solid red;color:white;background-color:red;}
 	}
@@ -109,6 +115,36 @@ a:hover {
   text-decoration: underline;
 }
 
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  font-size: 20px;
+}
+
+.stickybutton {
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: black;} /* Green */
+
+h1::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -100; 
+  height: 100; 
+  visibility: hidden; 
+  pointer-events: none;
+}
 
 </style>
 </head>
@@ -118,23 +154,34 @@ a:hover {
 	<div class="outer">
 	  <div class="middle">
 	    <div class="inner">
+
+<div class="sticky">
+<input type=button class="stickybutton button1" onClick="location.href='#events'"
+ value='EVENTS'>
+<input type=button class="stickybutton button1" onClick="location.href='#location'"
+ value='LOCATION'>
+<input type=button class="stickybutton button1" onClick="location.href='#contact'"
+ value='CONTACT'>
+</div>
+
 	      <div class="pagina">
+
 		      <a href="/"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropboxusercontent.com/s/j0m5r42wslvqval/logo.png?dl=1"></a></div>
           
 
 		<div class="evenement">
-		<h1 class="ev-title">EVENEMENTEN</h1>
+		<h1 class="ev-title" id="events">EVENTS</h1>
 			<div  class="sub-ev">
 			<table class="sub-ev-inh"><p class="ev-datum">vr 01 okt</p>
 			  <tr>
 			    <td>20:00</td>
 			    <td class="artist">De Blote Bosmens</td>
-			    <td class="listen"><a href="https://deblotebosmens.bandcamp.com/album/pure-brol" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="https://deblotebosmens.bandcamp.com/album/pure-brol" target="_self">Listen</a></td>
 			  </tr>
 			  <tr>
 			    <td>21:00</td>
 			    <td class="artist">Deathstar MacGyver</td>
-			    <td class="listen"><a href="https://www.youtube.com/watch?v=DUXSIkZ7lZs" target="_blank">Watch</a></td>
+			    <td class="listen"><a href="https://www.youtube.com/watch?v=DUXSIkZ7lZs" target="_self">Watch</a></td>
 			  </tr>
 			</table>
 			</div>
@@ -144,12 +191,12 @@ a:hover {
 			  <tr>
 			    <td>20:00</td>
 			    <td class="artist">Dood Potlood</td>
-			    <td class="listen"><a href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fnewworcesterspy.net%2Fwp-content%2Fuploads%2F2016%2F08%2Fbrokenpencil.jpg&f=1&nofb=1" target="_blank">Enjoy</a></td>
+			    <td class="listen"><a href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fnewworcesterspy.net%2Fwp-content%2Fuploads%2F2016%2F08%2Fbrokenpencil.jpg&f=1&nofb=1" target="_self">Enjoy</a></td>
 			  </tr>
 			  <tr>
 			    <td>21:00</td>
 			    <td class="artist">Erik Debny</td>
-			    <td class="listen"><a href="https://youtu.be/njs5zZuMQOg" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="https://youtu.be/njs5zZuMQOg" target="_self">Listen</a></td>
 			  </tr>
 			</table>
 			</div>
@@ -159,12 +206,12 @@ a:hover {
 			  <tr>
 			    <td><!--20:00--></td>
 			    <td class="artist">T.B.A</td>
-			    <td class="listen"><a href="XXX" target="_blank"></a></td>
+			    <td class="listen"><a href="XXX" target="_self"></a></td>
 			  </tr>
 			  <tr>
 			    <td>21:00</td>
 			    <td class="artist">Bontridders</td>
-			    <td class="listen"><a href="https://open.spotify.com/artist/0P4mglfdgMb4bO9AGWQE6K?si=BkGMQodbSwSTenbLaJafrg&dl_branch=1" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="https://open.spotify.com/artist/0P4mglfdgMb4bO9AGWQE6K?si=BkGMQodbSwSTenbLaJafrg&dl_branch=1" target="_self">Listen</a></td>
 			  </tr>
 			</table>			
 			</div>
@@ -174,12 +221,12 @@ a:hover {
 			  <tr>
 			    <td>20:00</td>
 			    <td class="artist">Magic Max</td>
-			    <td class="listen"><a href="https://magicmaxrecords.bandcamp.com/album/spit-on-your-bitch" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="https://magicmaxrecords.bandcamp.com/album/spit-on-your-bitch" target="_self">Listen</a></td>
 			  </tr>
 			  <tr>
 			    <td>21:00</td>
 			    <td class="artist">Vlerk</td>
-			    <td class="listen"><a href="https://vlerk.bandcamp.com/album/demo-k7" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="https://vlerk.bandcamp.com/album/demo-k7" target="_self">Listen</a></td>
 			  </tr>
 			</table>			
 			</div>
@@ -191,17 +238,31 @@ a:hover {
 			  <!--<tr>
 			    <td>20:00</td>
 			    <td class="artist">XXX</td>
-			    <td class="listen"><a href="XXX" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="XXX" target="_self">Listen</a></td>
 			  </tr>
 			  <tr>
 			    <td>21:00</td>
 			    <td class="artist">Vlerk</td>
-			    <td class="listen"><a href="XXX" target="_blank">Listen</a></td>
+			    <td class="listen"><a href="XXX" target="_self">Listen</a></td>
 			  </tr>-->
 			</table>			
 			</div>
 
 		</div>
+
+<div class="" style="padding-top:30;">
+<h1 class="ev-title" id="location">LOCATION</h1>
+<div style="">
+
+</div>
+</div>
+
+<div style="padding-top:30;">
+<h1 class="ev-title" id="contact">CONTACT</h1>
+<div style="">
+
+</div>
+</div>
 
 		<form>
 		<select name="list" id="list" accesskey="target" style="font-size:20;">
@@ -212,7 +273,7 @@ a:hover {
 		</select>
 		<input type=button style="font-size:20;" id="fightlist" value="FIGHT!" onclick="goToNewPage()" />
 		</form>
-<div style="color:red;padding:10;">Site Design ☺ <a href="http://deathstarmacgyver.com" target="_blank" style="font-family:'Courier New'">Deathstar MacGyver</a></div>
+<div style="color:red;padding:10;font-size:10;">Site Design ☺ <a href="http://deathstarmacgyver.com" target="_blank" style="font-family:'Courier New'">Deathstar MacGyver</a></div>
 
 
 	    </div>
