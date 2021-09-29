@@ -1,0 +1,35 @@
+h1.titel{font-family:arial;margin-bottom:0;}
+nav {font-family:arial;font-size:16;}
+
+nav select {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+h1.titel{text-align:center;}
+.zijbalk{background-color:green;margin-bottom:4%;}
+nav ul     { display: none;}
+nav select { display: flex;margin:0 auto;}
+.lichaam{background-color:orange;float:right;width:100%;}
+.content{margin:1% 1%;}
+
+}
+
+@media screen and (orientation: landscape) {
+.zijbalk{background-color:green;width:24%;height:95%;position:fixed;}
+.zijbalk-boven{background-color:blue;}
+.zijbalk-onder{background-color:purple;}
+.lichaam{background-color:orange;float:right;width:75%;}
+.content{margin:1% 1%;}
+
+}
+
+a{color:black;text-decoration:none;}
+a:hover{border-bottom: 1px dotted red; text-decoration: none;}
+a:active{color:red;text-decoration:none;}
+a:visited{color:black;text-decoration:none;}
+
+li{list-style-type: none;padding-bottom:5;}
+ul{margin:0;padding:0;}
+.content{font-family:arial;}
+	h1.content{color:red;}
