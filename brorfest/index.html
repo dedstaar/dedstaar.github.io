@@ -52,7 +52,12 @@ ul{margin:0;padding:0;}
 	h1.content{color:red;}
 
 </style>
-
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("/brorfest/content.html"); 
+    });
+    </script> 	
 </head>
 <body>
 
@@ -81,7 +86,6 @@ ul{margin:0;padding:0;}
 </div>
 </div>
 
-	<div class="lichaam"><link rel="import" class="content" href="/brorfest/content.html"></div>
-
+	<div class="lichaam"><div class="content" id="includedContent"></div>
 </body>
 </html>
