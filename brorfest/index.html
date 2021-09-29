@@ -1,0 +1,87 @@
+<html>
+<!-- https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css -->	
+<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
+	<!--https://stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer-->
+<!-- DROPDOWN LINK https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu -->
+<!-- CENTER TABLE https://www.w3schools.com/howto/howto_css_table_center.asp -->
+<!-- STICKY https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_element -->
+<!-- BUTTON https://www.w3schools.com/tags/tag_button.asp -->
+<!-- BUTTON LINK https://www.plus2net.com/html_tutorial/button-linking.php -->
+<!-- BOOKMARKS https://www.w3schools.com/html/html_links_bookmarks.asp -->
+<!-- STICKY + BOOKMARK LINK PROBLEM https://css-tricks.com/hash-tag-links-padding/ -->
+
+<!-- TWO DIVS https://www.tutorialspoint.com/How-to-place-two-divs-next-to-each-other-in-HTML -->
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BRORFEST</title>
+<style>
+h1.titel{font-family:arial;margin-bottom:0;}
+nav {font-family:arial;font-size:16;}
+
+nav select {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+h1.titel{text-align:center;}
+.zijbalk{background-color:green;margin-bottom:4%;}
+nav ul     { display: none;}
+nav select { display: flex;margin:0 auto;}
+.lichaam{background-color:orange;float:right;width:100%;}
+.content{background-color:black;margin:1% 1%;}
+
+}
+
+@media screen and (orientation: landscape) {
+.zijbalk{background-color:green;width:24%;height:95%;position:fixed;}
+.zijbalk-boven{background-color:blue;}
+.zijbalk-onder{background-color:purple;}
+.lichaam{background-color:orange;float:right;width:75%;}
+.content{background-color:black;margin:1% 1%;}
+
+}
+
+a{color:black;text-decoration:none;}
+a:hover{border-bottom: 1px dotted red; text-decoration: none;}
+a:active{color:red;text-decoration:none;}
+a:visited{color:black;text-decoration:none;}
+
+li{list-style-type: none;padding-bottom:5;}
+ul{margin:0;padding:0;}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="zijbalk">
+<div class="zijbalk-boven"><h1 class="titel">BRORFEST</h1></div>
+
+<div class="zijbalk-onder"><nav> 
+
+  <ul> 
+    <li><a href="/">new</a></li> 
+    <li><a href="#brorz">brorz</a></li> 
+    <li><a href="#bosmens">de blote bosmens</a></li> 
+    <li><a href="#deathstar">deathstar macgyver</a></li> 
+    <li><a href="#party">party</a></li> 
+  </ul> 
+  
+  <select> 
+    <option value="" selected="selected">where to go?</option> 
+    
+    <option value="/">new</option> 
+    <option value="#brorz">brorz</option> 
+    <option value="#bosmens">de blote bosmens</option> 
+    <option value="#deathstar">deathstar macgyver</option> 
+    <option value="#party">party</option> 
+  </select> 
+
+</nav></div>
+</div>
+
+<div class="lichaam"><embed type="text/html" class="content" src="brorfest/content.html"></div>
+
+</body>
+</html>
