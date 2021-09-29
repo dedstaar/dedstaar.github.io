@@ -25,23 +25,35 @@
 <div class="zijbalk-onder">
 <nav> 
   <ul> 
-    <li><a target="blogo" href="brorfest/content.html#brorz">brorz</a></li> 
-    <li><a target="blogo" href="brorfest/content.html#bosmens">de blote bosmens</a></li> 
-    <li><a target="blogo" href="brorfest/content.html#deathstar">deathstar macgyver</a></li> 
-    <li><a target="blogo" href="brorfest/content.html#party">party</a></li> 
+    <li><a target="blogo" href="brorfest.html#brorz">brorz</a></li> 
+    <li><a target="blogo" href="brorfest.html#bosmens">de blote bosmens</a></li> 
+    <li><a target="blogo" href="brorfest.html#deathstar">deathstar macgyver</a></li> 
+    <li><a target="blogo" href="brorfest.html#party">party</a></li> 
   </ul> 
   
-  <select ONCHANGE="document.getElementById('blogo').src = this.options[this.selectedIndex].value"> 
+  <select onchange="if (this.value) window.location.href=this.value"> 
     <option value="" selected="selected">where to go?</option> 
     
-    <option value="brorfest/content.html#brorz">brorz</option> 
-    <option value="brorfest/content.html#bosmens">de blote bosmens</option> 
-    <option value="brorfest/content.html#deathstar">deathstar macgyver</option> 
-    <option value="brorfest/content.html#party">party</option> 
+    <option value="brorfest.html#brorz">brorz</option> 
+    <option value="brorfest.html#bosmens">de blote bosmens</option> 
+    <option value="brorfest.html#deathstar">deathstar macgyver</option> 
+    <option value="brorfest.html#party">party</option> 
   </select> </nav>
 </div>
 </div>
 
-	<div class="lichaam"><div class="content"><iframe class="blog" id="blogo" src="brorfest/content.html" width="100%" height="95%" style="border:none;"></div></div>
+	<div class="lichaam"><div class="content"> 
+<!--
+  <img id="" src="" width="100%"><br><br>
+  <img id="" src="" width="100%"><br><br>
+  <img id="" src="" width="100%"><br><br>
+  <img id="" src="" width="100%"><br><br>
+  <img id="" src="" width="100%"><br><br>
+  <img id="" src="" width="100%"><br><br>-->
+  <img id="party" src="" width="100%"><br><br>
+  <img id="deathstar" src="https://dl.dropbox.com/s/fyukv43f6qln2v7/deathstar.PNG?dl=1" width="100%"><br><br>
+  <img id="bosmens" src="https://f4.bcbits.com/img/a4120434958_10.jpg" width="100%"><br><br>
+  <img id="brorz" src="https://dl.dropbox.com/s/4rkvou4psrwwe54/brorz.png?dl=1" width="100%"><br><br>
+  </div></div>
 </body>
 </html>
