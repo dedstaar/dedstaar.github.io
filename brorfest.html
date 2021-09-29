@@ -14,24 +14,62 @@
 
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BRORFEST</title>
-<link rel="stylesheet" href="brorfest/stijl.css">
+
 <style>
+h1.titel{font-family:arial;margin-bottom:0;}
+nav {font-family:arial;font-size:18;}
+
+nav select {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+h1.titel{text-align:center;position:relative;}
+.zijbalk{margin-bottom:4%;}
+nav ul     { display: none;}
+nav select { display: flex;margin:10 auto;position:relative}
+.lichaam{float:right;width:100%;position:relative;}
+.content{margin:1% 1%;}
+
+}
+
+@media screen and (orientation: landscape) {
+.zijbalk{width:24%;height:95%;position:fixed;padding:100;}
+.lichaam{float:right;width:75%;position:relative;}
+.content{margin:1% 50% 1% 1%;}
+
+}
+
+a{color:black;text-decoration:none;}
+a:hover{border-bottom: 1px dotted red; text-decoration: none;}
+a:active{color:red;text-decoration:none;}
+a:visited{color:black;text-decoration:none;}
+
+li{list-style-type: none;padding-bottom:5;}
+ul{margin:0;padding:0;}
+.content{font-family:arial;}
+	h1.content{color:red;}
+
+.blog{overflow:visible;}
+
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+
 }
+
 </style>
 </head>
 <body>
 	<video autoplay muted loop id="myVideo">
   <source src="https://dl.dropbox.com/s/5hjpcu1qr4uuk8j/wolken.mp4?dl=1" type="video/mp4">
 </video>
-
+<div class="totaal">
 <div class="zijbalk">
-<div class="zijbalk-boven"><h1 class="titel">BRORFEST</h1></div>
+<div class="zijbalk-boven"><h1 class="titel"><a href="/brorfest">BRORFEST</a></h1></div>
 
 <div class="zijbalk-onder">
 <nav> 
@@ -65,6 +103,6 @@
   <img id="deathstar" src="https://dl.dropbox.com/s/fyukv43f6qln2v7/deathstar.PNG?dl=1" width="100%"><br><br>
   <img id="bosmens" src="https://f4.bcbits.com/img/a4120434958_10.jpg" width="100%"><br><br>
   <img id="brorz" src="https://dl.dropbox.com/s/4rkvou4psrwwe54/brorz.png?dl=1" width="100%"><br><br>
-  </div></div>
+  </div></div></div>
 </body>
 </html>
