@@ -55,9 +55,19 @@ ul{margin:0;padding:0;}
     <script src="jquery.js"></script> 
     <script> 
     $(function(){
-      $("#includedContent").load("/brorfest/content.html"); 
+      $("#includedContent").load("content.html"); 
     });
     </script> 	
+
+	<script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
 </head>
 <body>
 
@@ -74,7 +84,7 @@ ul{margin:0;padding:0;}
     <li><a href="#party">party</a></li> 
   </ul> 
   
-  <select> 
+  <select onclick="goToNewPage()"> 
     <option value="" selected="selected">where to go?</option> 
     
     <option value="/brorfest">new</option> 
