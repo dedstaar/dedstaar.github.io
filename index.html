@@ -1,300 +1,83 @@
 <html>
-<!-- https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css -->	
-<!--https://www.sitepoint.com/css3-responsive-centered-image/-->
-	<!--https://stackoverflow.com/questions/8809909/change-cursor-to-finger-pointer-->
-<!-- DROPDOWN LINK https://stackoverflow.com/questions/19843373/linking-to-other-pages-in-html-via-drop-down-menu -->
-<!-- CENTER TABLE https://www.w3schools.com/howto/howto_css_table_center.asp -->
-<!-- STICKY https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_element -->
+
+<!-- RESPONSIVE https://www.w3schools.com/html/html_responsive.asp -->
 <!-- BUTTON https://www.w3schools.com/tags/tag_button.asp -->
-<!-- BUTTON LINK https://www.plus2net.com/html_tutorial/button-linking.php -->
-<!-- BOOKMARKS https://www.w3schools.com/html/html_links_bookmarks.asp -->
-<!-- STICKY + BOOKMARK LINK PROBLEM https://css-tricks.com/hash-tag-links-padding/ -->
+<!-- LINK IMAGE https://stackoverflow.com/questions/34082002/html-button-opening-link-in-new-tab#34082035 -->
+<!-- CURSOR https://www.w3schools.com/csSref/pr_class_cursor.asp -->
 
-
-<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BRORLAB.ORG</title>
-
-<script type="text/javascript">
-    function goToNewPage()
-    {
-        var url = document.getElementById('list').value;
-        if(url != 'none') {
-            window.location = url;
-        }
-    }
-</script>
-
-
+<head><title>Dedstaar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 <style>
+@media screen and (orientation: portrait) {
+#wrapper {width:90%;}
+.logotje {height:35px;margin:20px 1px;cursor:pointer;}
+.ri {width:100%;}
+.ytvid {width:100%;height:250;margin-top:6;}
+}
 
-	@media screen and (orientation: portrait) {
-	  .pagina {margin:auto;max-width: 90%;}
-	.sub-ev-inh{margin-left:auto;margin-right: auto;width:90%;color:#01FF01;align:center;font-size:23;}
-	.sub-ev{border:1px solid red;width:90%;margin-left:auto;margin-right:auto;margin-bottom:50;padding-bottom:10;padding-top:10;}
-	.ev-title{letter-spacing:10;margin-bottom:50;}
-	td{padding-bottom:15;padding-top:15;}
-	.ev-datum{font-weight:bold;letter-spacing:5;word-spacing:10;border:20px solid red;color:white;background-color:red;margin-top:-10;}
-	.map{width:100%;height:400;}
-	.stickybutton {
-	  border: none;
-	  color: white;
-	  padding: 20px 5px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 14px;
-	  margin: 4px 0px;
-	  cursor: pointer;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;}
-.cont{border-spacing: 0 10;display:inline-block;text-align:left;}
-.betweener{width:10%;}
-	}
+@media screen and (orientation: landscape) {
+#wrapper {width:50%;}
+.logotje {height:40px;margin:20px 10px;cursor:pointer;}
+.ri {width:50%;}
+.ytvid {width:100%;height:400;margin-top:15;}
+}
 
-	@media screen and (orientation: landscape) {
-	  .pagina {margin:auto;max-width: 30%;}
-	.x{display:none;}
-	.sub-ev-inh{margin-left:auto;margin-right:auto;width:90%;color:#01FF01;align:center;font-size:23;border-spacing:20;}
-	.sub-ev{border:1px solid red;width:60%;margin-left:auto;margin-right:auto;margin-bottom:50;padding-bottom:20;padding-top:20;}
-	.ev-title{letter-spacing:10;margin-bottom:50;}
-	.ev-datum{font-weight:bold;letter-spacing:5;word-spacing:101;border:20px solid red;color:white;background-color:red;margin-top:-20;}
-	.map{width:100%;height:500;}
-	.stickybutton {
-	  border: none;
-	  color: white;
-	  padding: 15px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 16px;
-	  margin: 4px 2px;
-	  cursor: pointer;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;}
-	.button1:hover{background-color:white;color:black;}
-.cont{border-spacing: 0 20;display:inline-block;text-align:left;}
-.betweener{width:5%;}
-	}
-
-	img.ri {
-	max-width: 100%;
-	display: block;
-	margin-left:auto;margin-right:auto;
-	}
-
-	p {
-	font-size:20;
-	line-height:0;
-	color:#01FF01;
-	}
-  
-	h1{
-	line-height:0;
-	color:#01FF01;
-	}
-  
-  button{
-  font-size:14;
-  margin-bottom:10;
-  }
-  
-	a:link {
-	  color: black;
-	}
-
-	a:visited {
-	  color: black;
-	}
-
-	a:hover {
-	  color: red;
-	}
-
-	.outer {
-	  display: table;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  height: 100%;
-	  width: 100%;
-	}
-
-	.middle {
-	display: table-cell;
-	vertical-align: middle;
-  	text-align:center;
-	}
-
-	.artist{text-align:center;}
-	.listen{text-align:right;}
-
-a:link {
-  color: #01FF01;
-  background-color: transparent;
+#wrapper {margin:auto;}
+.button {
+font-weight: bold;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
   text-decoration: none;
-}
-
-a:visited {
-  color: #01FF01;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: black;
+  display: inline-block;
   font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }
 
-.button1 {background-color: black;}
-.button2 {background-color: black; border:5px solid red; font-family:verdana;letter-spacing:10; font-size:20;}
-.button2:hover{background-color:red;}
+.button1 {color:black;background-color: white;width:100%;}
+.button2 {background-color: pink;width:100%;}
+.button0 {background-color: ;}
 
-h1::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -100; 
-  height: 100; 
-  visibility: hidden; 
-  pointer-events: none;
-}
-
-#insta {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  font-size: 30px; /* change this to change the size*/
-  
-}
-
-a.tel{color:white;}
-a.tel:hover{color:red;text-decoration:none;}
-a.tel:visited{color:white}
+body {text-align:center;font-family:arial;background-color:black;color:white;}
+table {width:100%;}
 
 </style>
+
 </head>
 
+<body>
+<div id="wrapper">
+<div id="kop">
 
-<body style="background-color:black;">
+ <!-- <a href="/"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropbox.com/s/b502uv6nyzbag8x/logo.png?dl=1"></a>
+</div kop>
+-->
 
+<h1>Dedstaar</h1>
+ 
+<div id="links">
+<button class="button button1" onClick="parent.open('https://dedstaar.bandcamp.com/')">bandcamp</button><br>
+<button class="button button1" onClick="parent.open('https://www.instagram.com/dedstaar/')">instagram</button><br>
 
-	<div class="outer">
-	  <div class="middle">
-	    <div class="inner">
+</div links>
 
-<div class="sticky">
-<input type=button class="stickybutton button1" onClick="location.href='#events'"
- value='EVENTS'>
-<input type=button class="stickybutton button1" onClick="location.href='#location'"
- value='LOCATION'>
-<input type=button class="stickybutton button1" onClick="location.href='#contact'"
- value='CONTACT'>
-</div>
+<!-- <iframe class="ytvid" src="https://www.youtube.com/embed/DUXSIkZ7lZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 
-	      <div class="pagina">
+<!--<div id="poeplink">
+<img class="logotje" onclick=" window.open('https://open.spotify.com/artist/7IBi5YrhJPgXzgfCwslAvu?si=_2ZqeUnlS_uAzIWsruOS9w&dl_branch=1','_blank')" src="https://dl.dropbox.com/s/ujbxaqbpym5da5q/Spotify-Logo.png?dl=1">
+<img class="logotje" onclick=" window.open('https://youtu.be/DUXSIkZ7lZs','_blank')" src="https://dl.dropbox.com/s/8edndebucxxjt8u/Youtube-logo-png-photo-0.png?dl=1">
+<img class="logotje" onclick=" window.open('https://www.instagram.com/deathstarmacgyver/','_blank')" src="https://dl.dropbox.com/s/992xf5zsjgfgjic/logo-instagram-png-fundo-transparente5.png?dl=1">
+<img class="logotje" onclick=" window.open('https://deathstarmacgyver.bandcamp.com/','_blank')" src="https://dl.dropbox.com/s/6i4d3sbkm5pinzg/bandcamp-logo-vector-png-bandcamp-logo-bc-1295.png?dl=1">
+<img class="logotje" onclick=" window.open('mailto:deathstarmacgyver@gmail.com','_blank')" src="https://dl.dropbox.com/s/l37ryt33c9vzhot/black-mail-envelope-illustration-email-computer-icons-webmail-message-email-png-clip-art.png?dl=1">
+</div poeplink>
+-->
 
-		      <a href="/"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropboxusercontent.com/s/j0m5r42wslvqval/logo.png?dl=1"></a></div>
-          
-
-		<div class="evenement">
-		<h1 class="ev-title" id="events">EVENTS</h1>
-			
-
-			<div  class="sub-ev">
-			<table class="sub-ev-inh"><p class="ev-datum">sa 23 oct</p>
-			  <tr>
-			    <td>20:00</td>
-			    <td class="artist">Magic Max</td>
-			    <td class="listen"><a href="https://magicmaxrecords.bandcamp.com/album/spit-on-your-bitch" target="_self">Listen</a></td>
-			  </tr>
-			  <tr>
-			    <td>21:00</td>
-			    <td class="artist">Vlerk</td>
-			    <td class="listen"><a href="https://vlerk.bandcamp.com/album/demo-k7" target="_self">Listen</a></td>
-			  </tr>
-			</table>			
-			</div>
-
-
-<div  class="sub-ev">
-			<table class="sub-ev-inh"><p class="ev-datum">th 28 oct</p>
-<tr>
-			    <td>__:__</td>
-			    <td class="artist">T.B.A</td>
-			    <td class="listen"><!--<a href="https://magicmaxrecords.bandcamp.com/album/spit-on-your-bitch" target="_self">Listen</a>--></td>
-			  </tr>
-			  <tr>
-			    <td>__:__</td>
-			    <td class="artist" style="letter-spacing:10;">👻 BRORLAB 👻</td>
-			    <td class="listen"><a href="https://www.youtube.com/watch?v=HT6NHBSu9zo" target="_self">Listen</a></td>
-			  </tr>
-			</table>			
-			</div>
-		</div>
-
-<img class="betweener" style="padding-top:50;" src="https://dl.dropbox.com/s/vl2byhiui7lqp29/logo2.png?dl=1" title="brorlab 4 life">
-
-<div class="" style="padding-top:10;padding-bottom:100;">
-<h1 class="ev-title" id="location" style="margin-bottom:20;">LOCATION</h1>
-<div><div class="sub-ev" style="margin:10;padding:10;display:inline-block;width:auto;"><p>Dingen Die Niet Verkopen</p><p>Oude Beurs 62, Antwerpen</p></div><br><a href="https://goo.gl/maps/5ChA9CzJetEjHicP6" target="_self"><button>Open Google Maps</button></a>
-<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.868482562562!2d4.400134815539742!3d51.22149837958919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f7c5da44f7%3A0x5f59e5351691370c!2sOude%20Beurs%2062%2C%202000%20Antwerpen!5e0!3m2!1snl!2sbe!4v1632863100300!5m2!1snl!2sbe" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-</div>
-
-<img class="betweener" src="https://dl.dropbox.com/s/nyqt1i3kopnvw8f/logo3.png?dl=1" title="i need yer protection">
-
-<div style="padding-top:10;padding-bottom:50;">
-<h1 class="ev-title" id="contact" style="margin-bottom:20;">CONTACT</h1>
-<!--<input type=button class="stickybutton button2" onClick="location.href='https://www.instagram.com/brorlabfanclub/'"
- value='insta'>
-<input type=button class="stickybutton button2" onClick="location.href='tel:+32472460316'"
- value='0472 46 03 16'>-->
-
-<table class="cont">
-<tr><td><a href="https://www.instagram.com/brorlabfanclub"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
-<i class="fa fa-instagram" id="insta" aria-hidden="true"> @brorlabfanclub</i></a></td></tr>
-<tr><td><a href="https://www.instagram.com/bontridders/"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
-<i class="fa fa-instagram" id="insta" aria-hidden="true"> @bontridders</i></a></td></tr>
-<tr><td><a href="https://www.instagram.com/achieldevlerk/"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
-<i class="fa fa-instagram" id="insta" aria-hidden="true"> @achieldevlerk</i></a></td></tr>
-<tr><td><a href="https://www.instagram.com/hilariothesavior/"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
-<i class="fa fa-instagram" id="insta" aria-hidden="true"> @hilariothesavior</i></a></td></tr>
-
-</table>
-
-</div>
-
-		<!--<form>
-		<select name="list" id="list" accesskey="target" style="font-size:20;">
-		    <option value='none' selected>CHOOSE YOUR PLAYER</option>
-		    <option value="sam" >SAM</option>
-		    <option value="achiel">ACHIEL</option>
-		    <option value="raf">RAF</option>
-		</select>
-		<input type=button style="font-size:20;" id="fightlist" value="FIGHT!" onclick="goToNewPage()" />
-		</form>-->
-
-<div style="color:red;padding:10;font-size:13;">Site Design ☺ <a href="http://deathstarmacgyver.com" target="_blank" style="font-family:'Courier New'">Deathstar MacGyver</a></div>
-
-
-	    </div>
-	  </div>
-	</div>
-
-  
+</div wrapper>
 </body>
+
 </html>
